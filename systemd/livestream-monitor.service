@@ -1,0 +1,12 @@
+[Unit]
+Description=Livestream Monitoring Flask App
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/livestream-monitor
+ExecStart=/home/ubuntu/livestream-monitor/venv/bin/python3 /home/ubuntu/livestream-monitor/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
