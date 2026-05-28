@@ -24,7 +24,7 @@ OBS → RTMP → NGINX → HLS → Browser Player
 - HLS.js
 - systemd
 
-##To Start the service on a fresh EC2, 
+## To Start the service on a fresh EC2, 
 - on a newly created EC2, use ports ssh 22, http 80, https 443, RTMP 1935, PythonFlaskAPI 5000 
 - if one windows machine -> open powershell -> ssh -i "path to .pem key" ubuntu@EC2IP
 - ls -lh
@@ -36,4 +36,5 @@ OBS → RTMP → NGINX → HLS → Browser Player
 -   it will take 3-5 min to load everything, for further tests
 -   use http://xx.xx.xxx.xxx/player.html
 -   VLC -> open network stream -> http://xx.xx.xxx.xxx/hls/stream.m3u8
+-   To check on the player and latency etc, use hls.js.video-dev.org/demo, put in the url field: http://xx.xx.xxx.xxx/hls/stream.m3u8, and click play
 -   To check Python Flask API, status: http://xx.xx.xxx.xxx:5000/status, heartbeat: http://xx.xx.xxx.xxx:5000/heartbeat
